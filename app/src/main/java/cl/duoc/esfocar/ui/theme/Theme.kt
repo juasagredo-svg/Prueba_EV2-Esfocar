@@ -1,4 +1,4 @@
-package cl.duoc.esfocar.ui
+package cl.duoc.esfocar.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -32,6 +32,6 @@ private val Dark = darkColorScheme(
 )
 
 @Composable
-fun EsfocarTheme(dark: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
+fun Theme(dark: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
     MaterialTheme(colorScheme = if (dark) Dark else Light, content = content)
 }
