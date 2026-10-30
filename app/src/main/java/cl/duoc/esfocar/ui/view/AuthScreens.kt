@@ -56,7 +56,7 @@ fun RegisterScreen(vm: AuthViewModel, onBack: () -> Unit) {
     val valid = Validators.name(name) == null && Validators.email(email) == null &&
         Validators.password(pass) == null && Validators.confirm(pass, confirm) == null
 
-    AuthLayout("Crear cuenta", "Usa datos ficticios (MVP académico)") {
+    AuthLayout("Crear una cuenta") {
         FormField(name, { name = it }, "Nombre", nameErr, Icons.Default.Person)
         FormField(email, { email = it; vm.clearError() }, "Correo", emailErr, Icons.Default.Email, keyboard = KeyboardType.Email)
         FormField(pass, { pass = it }, "Contraseña", passErr, Icons.Default.Lock, password = true)
